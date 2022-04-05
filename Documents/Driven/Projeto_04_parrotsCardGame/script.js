@@ -24,23 +24,14 @@ function comparador() {
 }
 //
 function createCards(){
-    for(let i=0;i<(ncards-1);i++){
-        document.querySelector(".cards").innerHTML+=`<div class="card" onclick="flip(this)">
-        <div class="front-face face">
-            <img src="media/front.png" alt="Parrot">
-        </div>
-        <div class="back-face face">
-            <img src="media/front.png" alt="Parrot">
-            Verso
-        </div>
-    </div>`
-        // if(positions[i]==0) createCard(bobrossparrot);
-        // if(positions[i]==1) createCard(explodyparrot);
-        // if(positions[i]==2) createCard(fiestaparrot);
-        // if(positions[i]==3) createCard(metalparrot);
-        // if(positions[i]==4) createCard(revertitparrot);
-        // if(positions[i]==5) createCard(tripletsparrot);
-        // if(positions[i]==6) createCard(unicornparrot);
+    for(let i=0;i<(ncards);i++){
+        if(positions[i]==0) createCard("bobrossparrot");
+        if(positions[i]==1) createCard("explodyparrot");
+        if(positions[i]==2) createCard("fiestaparrot");
+        if(positions[i]==3) createCard("metalparrot");
+        if(positions[i]==4) createCard("revertitparrot");
+        if(positions[i]==5) createCard("tripletsparrot");
+        if(positions[i]==6) createCard("unicornparrot");
     }
 }
 function createCard(parrot){
@@ -51,7 +42,6 @@ function createCard(parrot){
         </div>
         <div class="back-face face">
             <img src="media/${parrot}.gif" alt="Parrot">
-            Verso
         </div>
     </div>`;
 }
