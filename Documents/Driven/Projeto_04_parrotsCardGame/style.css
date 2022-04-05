@@ -22,8 +22,10 @@ h1{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .card{
+    margin: 20px;
     background-color: #A7E9AF;
     width: 117px;
     height: 146px;
