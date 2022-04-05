@@ -1,0 +1,67 @@
+body{
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+h1{
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+
+    color: #75B79E;
+}
+.cards{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    background-color: #A7E9AF;
+    width: 117px;
+    height: 146px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.back-face {
+    display: none;
+    transform: rotateY(180deg);
+}
+.card:hover .back-face {
+    transform: rotateY(0deg);
+    display: block;
+}
+.card:hover .front-face {
+    transform: rotateY(-180deg);
+    display: none; /*klaus*/
+}
+.card img{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 614px) {
+    h1{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: -0.004em;
+        color: #75B79E;
+    }
+}
+
