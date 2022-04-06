@@ -80,7 +80,11 @@ function memory(element){
             nPairs++;
             if(nPairs==(ncards/2)){
                 setTimeout(function(){
-                    alert(`Você ganhou em ${nClicks} jogadas!`)
+                    alert(`Você ganhou em ${nClicks} jogadas!`);
+                    let restart=prompt("Deseja jogar novamente?(sim/não)");
+                    if (restart=="sim"){
+                        document. location. reload();
+                    }
                 }, 1000); 
             }
             return;
