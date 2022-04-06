@@ -5,6 +5,12 @@ let lastParrotElement;
 let nClicks=0;
 let nPairs=0;
 
+let sec=0;
+setInterval(function(){
+    document.getElementById('timerDisplay').innerHTML="Timer: "+sec+" segundos";
+    sec++;
+}, 1000);
+
 nCards();
 defineCards();
 createCards();
@@ -80,7 +86,7 @@ function memory(element){
             nPairs++;
             if(nPairs==(ncards/2)){
                 setTimeout(function(){
-                    alert(`Você ganhou em ${nClicks} jogadas!`);
+                    alert(`Você ganhou em ${nClicks} jogadas e ${sec-1} segundos!`);
                     let restart=prompt("Deseja jogar novamente?(sim/não)");
                     if (restart=="sim"){
                         document. location. reload();
@@ -101,5 +107,5 @@ function memory(element){
         lastParrot=actualParrot;
         lastParrotElement=element;
         return;
-    }
+    }    
 }
