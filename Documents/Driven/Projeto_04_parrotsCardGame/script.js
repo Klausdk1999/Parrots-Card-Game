@@ -82,6 +82,8 @@ function memory(element){
     let actualParrot=element.getAttribute('id');
     if(lastParrot!=null){
         if(actualParrot==lastParrot){
+            lastParrotElement.classList.add("pointerEventsNone");
+            element.classList.add("pointerEventsNone");
             lastParrot=null;
             nPairs++;
             if(nPairs==(ncards/2)){

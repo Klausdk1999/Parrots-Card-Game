@@ -29,6 +29,9 @@ h1{
 
     color: #75B79E;
 }
+.pointerEventsNone{
+    pointer-events: none;
+}
 .cards{
     margin-left: 10%;
     margin-right: 10%;
