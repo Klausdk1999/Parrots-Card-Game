@@ -2,6 +2,8 @@ let ncards=0;
 let positions=[];//criar array para cartas que serao embaralhadas
 let lastParrot;
 let lastParrotElement;
+let nClicks=0;
+let nPairs=0;
 
 nCards();
 defineCards();
@@ -49,6 +51,7 @@ function createCard(parrot,id){
     </div>`;
 }
 function flip(element){
+    nClicks++;
     if(element.querySelector(".front-face")==null){
         //delay 1 segunda cartas diferentes
         unflip(element);
@@ -74,6 +77,12 @@ function memory(element){
     if(lastParrot!=null){
         if(actualParrot==lastParrot){
             lastParrot=null;
+            nPairs++;
+            if(nPairs==(ncards/2)){
+                setTimeout(function(){
+                    alert(`Você ganhou em ${nClicks} jogadas!`)
+                }, 1000); 
+            }
             return;
         }else{
             setTimeout(function(){
