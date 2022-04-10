@@ -26,8 +26,29 @@ h1{
     font-size: 56px;
     line-height: 66px;
     letter-spacing: -0.004em;
-
     color: #75B79E;
+}
+h2{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -0.004em;
+  color: #EEF9BF;
+}
+.box{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #75B79E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 3px rgba(255, 15, 15, 0.5);
+}
+.box img{
+  width: 80px;
+  height: 80px;
 }
 .pointerEventsNone{
     pointer-events: none;
@@ -80,7 +101,7 @@ h1{
   transform: rotateY(-180deg);
 }
 
-@media (max-width: 614px) {
+@media (max-width: 500px) {
     h1{
         font-family: 'Roboto';
         font-style: normal;

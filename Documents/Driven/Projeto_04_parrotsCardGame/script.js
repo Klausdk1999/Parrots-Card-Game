@@ -87,8 +87,9 @@ function memory(element){
             lastParrot=null;
             nPairs++;
             if(nPairs==(ncards/2)){
+                endBox();
                 setTimeout(function(){
-                    alert(`Você ganhou em ${nClicks} jogadas e ${sec-1} segundos!`);
+                    alert(`Você ganhou em ${nClicks} jogadas e ${sec-2} segundos!`);
                     let restart=prompt("Deseja jogar novamente?(sim/não)");
                     if (restart=="sim"){
                         document. location. reload();
@@ -99,7 +100,7 @@ function memory(element){
                             restart=prompt("Deseja jogar novamente?(sim/não)");
                         }
                     }
-                }, 1000); 
+                }, 2000); 
             }
             return;
         }else{
@@ -116,4 +117,11 @@ function memory(element){
         lastParrotElement=element;
         return;
     }    
+}
+function endBox(){
+    document.querySelector(".cards").innerHTML=`
+    <div class="box">
+        <h2>Você ganhou em ${nClicks} jogadas e ${sec} segundos!</h2>
+        <img src="media/front.png" alt="Parrot">
+    </div>`
 }
