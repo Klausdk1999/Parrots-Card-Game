@@ -92,6 +92,12 @@ function memory(element){
                     let restart=prompt("Deseja jogar novamente?(sim/não)");
                     if (restart=="sim"){
                         document. location. reload();
+                    }else if(restart=="não"){
+
+                    }else{
+                        while(restart!="sim" && restart!="não"){
+                            restart=prompt("Deseja jogar novamente?(sim/não)");
+                        }
                     }
                 }, 1000); 
             }
