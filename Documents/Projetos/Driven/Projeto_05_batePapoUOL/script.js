@@ -1,7 +1,15 @@
-function join_leave(){
+//elementoQueQueroQueApareca.scrollIntoView();
+
+function join(){
     document.querySelector(".feed").innerHTML+=`
     <div class="messageBox grey">
         <h1><strong>fulano</strong> entrou no chat</h1>
+    </div>`
+}
+function leave(){
+    document.querySelector(".feed").innerHTML+=`
+    <div class="messageBox grey">
+        <h1><strong>fulano</strong> saiu do chat</h1>
     </div>`
 }
 function private(){
@@ -16,7 +24,23 @@ function messageAll(){
         <h1><strong>fulano</strong> para <strong>todos</strong>: mensagem </h1>
     </div>`
 }
-join_leave();
+join();
 private();
 messageAll();
-join_leave();
+join();
+leave();
+private();
+messageAll();
+leave();
+leave();
+private();
+messageAll();
+leave();
+join();
+private();
+messageAll();
+join();
+join();
+private();
+messageAll();
+leave();
